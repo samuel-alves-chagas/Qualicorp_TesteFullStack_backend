@@ -10,6 +10,7 @@
   "author": "Samuel Alves Chagas <samuelchagasalves@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.10"
   },

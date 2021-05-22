@@ -4,7 +4,7 @@ const userController = require("./controllers/user/userController");
 
 routes.get("/users", userController.listUsers);
 
-routes.post("/newuser", userController.createUser);
+routes.post("/user", userController.createUser);
 
 routes.put("/user/:id", userController.updateUser);
 

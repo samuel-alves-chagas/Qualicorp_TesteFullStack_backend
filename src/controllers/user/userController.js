@@ -1,5 +1,5 @@
 const listUsers = async (req, res) => {
-  return res.json({ message: "listagem enviada", data: {} });
+  return res.json({ message: "Tá dando certo Aninha, te amuu", data: {} });
 };
 
 const createUser = async (req, res) => {

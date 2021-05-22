@@ -17,7 +17,17 @@ const createUser = async (req, res) => {
 };
 
 const updateUser = async (req, res) => {
-  return res.json({ message: "success", data: {} });
+  const user = await usersCollection.findOneAndUpdate(
+    { _id: req.params.id },
+    {
+      name: req.body.name,
+      cpf: req.body.cpf,
+      email: req.body.email,
+      telefone: req.body.telefone,
+    },
+    { useFindAndModify: true }
+  );
+  return res.json({ message: "success", data: { user } });
 };
 
 const deleteUser = async (req, res) => {

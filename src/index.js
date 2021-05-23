@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config(); // Captura variáveis setadas no arquivo .env
 
 const express = require("express");
 const routes = require("./routes");
@@ -7,17 +7,17 @@ const cors = require("cors");
 
 const app = express();
 
-// Database setup
+// Setup do banco de dados
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-app.use(cors());
+app.use(cors()); // Utilzação do cors para permissão de acesso à API, quando vazio qualquer IP pode se conectar
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// app.use(cors());    //Uso do módulo de segurança
-app.use(routes); //Uso das rotas da aplicação
+app.use(routes);
 
+// Acessando variável de ambiente setada pelo Heroku, pois no ambiente de deploy não é possível setar a porta
 app.listen(process.env.PORT || 3000);

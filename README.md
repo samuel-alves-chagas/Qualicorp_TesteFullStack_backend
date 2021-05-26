@@ -40,7 +40,3 @@ Para realização do CRUD dforam disponibilizadas 4 rotas, sendo elas:
 ### Possíveis melhorias
 
 - Implementação de validação dos métodos durante as fases de POST e PUT a fim de evitar problemas de persistência e apresentação por parte do frotend.
-
-```
-
-```
